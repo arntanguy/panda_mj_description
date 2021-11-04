@@ -1,0 +1,3 @@
+[submodule "franka_sim"]
+	path = franka_sim
+	url = https://github.com/vikashplus/franka_sim.git
