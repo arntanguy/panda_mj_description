@@ -19,10 +19,10 @@ else()
   set(PANDA_PDGAINS_PATH "${MC_MUJOCO_SHARE_DESTINATION}/panda/${PANDA_PDGAINS_PATH}")
 endif()
 
-configure_file(mc_mujoco/panda_default.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/panda_default.yaml")
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/panda_default.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
+configure_file(mc_mujoco/panda_hand.in.yaml "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/panda_hand.yaml")
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/mc_mujoco/panda_hand.yaml" DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}")
 
 install(DIRECTORY franka_sim DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/panda" FILES_MATCHING PATTERN "*.stl")
 install(DIRECTORY franka_sim DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/panda" FILES_MATCHING PATTERN "*.xml")
-#install(DIRECTORY pdgains DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/panda" FILES_MATCHING PATTERN "*.dat")
+install(DIRECTORY pdgains DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/panda" FILES_MATCHING PATTERN "*.dat")
 install(DIRECTORY franka_sim DESTINATION "${MC_MUJOCO_SHARE_DESTINATION}/panda" FILES_MATCHING PATTERN "*.xml")
